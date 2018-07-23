@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            
+            <h1 class="text-center">Ajouter un produit</h1>
+            
+            <%= simple_form_for @product do |f| %>
+                <%= f.input :name, placeholder: "Kudoz", label: "Which product?" %>
+                <%= f.input :url, placeholder: "http://getkudoz.com", label: "Which url?" %>
+                <%= f.button :submit, "Ajouter", class: "btn btn-primary" %>
+            <% end %>
+            
+            <!--<form action="/products" method="post">-->
+            <!--    <div class="form-group">-->
+            <!--        <label for="name">Choisissez un nom de produit</label>-->
+            <!--        <input type="text" name="product[name]" class="form-control" placeholder="Kudoz" id="name">-->
+            <!--    </div>-->
+                
+            <!--    <div class="form-group">-->
+            <!--        <label for="url">Quelle URL ?</label>-->
+            <!--        <input type="text" name="product[url]" class="form-control" placeholder="http://getkudoz.com" id="url">-->
+            <!--    </div>-->
+                
+            <!--    <input type="submit" value="Ajouter" class="btn btn-primary">-->
+            <!--</form>-->
+            
+        </div>
+    </div>
+</div>
+
+
