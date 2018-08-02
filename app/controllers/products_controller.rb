@@ -28,6 +28,10 @@ class ProductsController < ApplicationController
     end
     
     def edit
+        if @product.user == current_user
+        else
+            render :_wrong_user
+        end
     end
     
     def update
@@ -39,15 +43,19 @@ class ProductsController < ApplicationController
     end
     
     def destroy
-        @product.destroy
-        redirect_to products_path
+        if @product.user == current_user
+            @product.destroy
+            redirect_to products_path
+        else
+            render :_wrong_user
+        end
     end
     
     
     private
     
     def product_params
-        params.require(:product).permit(:name, :url, :tagline, :category)
+        params.require(:product).permit(:name, :url, :tagline, :category, :photo)
     end
     
     def find_product

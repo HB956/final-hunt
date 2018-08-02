@@ -9,6 +9,10 @@ gem 'puma'
 gem 'rails', '5.2.0'
 gem 'redis'
 gem 'devise'
+gem 'cloudinary'
+gem "attachinary"
+gem "jquery-fileupload-rails"
+gem "coffee-rails"
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
